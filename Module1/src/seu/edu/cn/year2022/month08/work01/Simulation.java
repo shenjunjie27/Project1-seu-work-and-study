@@ -1,14 +1,14 @@
 /*
  * Copyright (c) 2022
  * @Author:shenjunjie27@126.com
- * @LastModified:2022-08-25 21:33:10.584-+08:00
+ * @LastModified:2022-08-30 17:23:07.008-+08:00
  */
 
-package seu.edu.cn.year2022.month08;
+package seu.edu.cn.year2022.month08.work01;
 
 import java.util.*;
 
-public class Test0825 {
+public class Simulation {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         List<String> list = new ArrayList<>();
@@ -66,8 +66,6 @@ public class Test0825 {
                 list_3.add(-t);
             }
         }
-        map1.put(21, 1);
-
 
         round(map1, Host_n, Vm_n);
 
@@ -135,7 +133,7 @@ public class Test0825 {
             t_all = t_all + t1;
 //            System.out.println("The host " + i + " is " + t1 * 10000);
         }
-        System.out.println(t_all * 10000);
+//        System.out.println(t_all * 10000);
         double[] temp_all = cal_all_host(list_vm, list_host);
         double t2 = temp_all[3];
         list_t.add(temp_all);
@@ -166,9 +164,10 @@ public class Test0825 {
         double res = (3 * (a * a + b * b + c * c) - (a + b + c) * (a + b + c)) / 9;
 
 //        System.out.println("a=" + a + " b=" + b + " c=" + c);
-        System.out.println(a + "\t" + b + "\t" + c + "\t" + res * 10000);
+
 //
-        res = (double) Math.round(res * 1000000) / 1000000;
+        res = (double) Math.round(res * 10000) / 10000;
+        System.out.println(a + "\t" + b + "\t" + c + "\t" + res * 10000);
         double[] arr_res = new double[]{a, b, c, res};
         return arr_res;
 
@@ -206,7 +205,10 @@ public class Test0825 {
         double res = (3 * (a * a + b * b + c * c) - (a + b + c) * (a + b + c)) / 9;
 //        保留四位小数
 //        System.out.println("a=" + a + " b=" + b + " c=" + c);
-        res = (double) Math.round(res * 1000000) / 1000000;
+        a = (double) Math.round(a * 10000) / 10000;
+        b = (double) Math.round(b * 10000) / 10000;
+        c = (double) Math.round(c * 10000) / 10000;
+        res = (double) Math.round(res * 10000) / 10000;
         System.out.println(a + "\t" + b + "\t" + c + "\t" + res * 10000);
         double[] arr_res = new double[]{a, b, c, res};
         return arr_res;

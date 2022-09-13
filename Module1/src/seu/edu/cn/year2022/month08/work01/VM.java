@@ -1,10 +1,10 @@
 /*
  * Copyright (c) 2022
  * @Author:shenjunjie27@126.com
- * @LastModified:2022-08-25 21:58:22.249-+08:00
+ * @LastModified:2022-08-30 17:23:11.335-+08:00
  */
 
-package seu.edu.cn.year2022.month08;
+package seu.edu.cn.year2022.month08.work01;
 
 import java.util.Objects;
 
